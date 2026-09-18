@@ -18,6 +18,7 @@ This extension is **not published on the Chrome Web Store**. It's distributed as
   - [Updating](#updating)
 - [Why no Chrome Web Store listing?](#why-no-chrome-web-store-listing)
 - [Permissions used](#permissions-used)
+- [License](#license)
 
 ## Features
 
@@ -37,7 +38,9 @@ This extension is **not published on the Chrome Web Store**. It's distributed as
 
 Since this extension isn't published to the Chrome Web Store, you load it directly from source in Developer Mode. This works in Chrome, Brave, Edge, and other Chromium-based browsers.
 
-1. **Download or clone this project** to a folder on your computer.
+1. **Get the files** — either:
+   - **Download the zip** from the [latest release](https://github.com/mahd1ar/Read-Aloud-With-Fish/releases/latest), then unzip it into a folder you'll keep (deleting the folder uninstalls the extension), **or**
+   - **Clone the repo:** `git clone https://github.com/mahd1ar/Read-Aloud-With-Fish.git`
 2. Open your browser and go to the extensions page:
    - Chrome: `chrome://extensions`
    - Edge: `edge://extensions`
@@ -60,7 +63,13 @@ Since this extension isn't published to the Chrome Web Store, you load it direct
 
 ### Updating
 
-Since it's not on the Web Store, updates don't happen automatically. To update: pull/download the latest files into the same folder, then go back to `chrome://extensions` and click the refresh icon on the Read Aloud card (or remove it and load unpacked again).
+Since it's not on the Web Store, updates don't happen automatically. To update:
+
+1. Grab the newer files — download the zip from the [latest release](https://github.com/mahd1ar/Read-Aloud-With-Fish/releases/latest) and unzip it over your existing folder, or run `git pull` if you cloned.
+2. Go to `chrome://extensions` and click the refresh icon on the Read Aloud card.
+3. Reload any tabs that were already open — pages opened before the refresh won't have the right-click menu.
+
+If something still looks stale, remove the extension and load unpacked again.
 
 ## Why no Chrome Web Store listing?
 
@@ -75,6 +84,36 @@ This is a personal/self-hosted tool, not intended for public distribution. Loadi
 | `contextMenus` | Add the "Read Aloud" right-click menu item |
 | `offscreen` | Play the generated audio from the background script |
 | `host_permissions: api.fish.audio` | Send text to Fish Audio's TTS API and receive audio back |
+
+## License
+
+Released under the [MIT License](#mit-license).
+
+### MIT License
+
+```
+MIT License
+
+Copyright (c) 2026 Mahdiyar Anari
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
 
 ---
 
@@ -94,6 +133,7 @@ This is a personal/self-hosted tool, not intended for public distribution. Loadi
   - [به‌روزرسانی](#بهروزرسانی)
 - [چرا در فروشگاه کروم منتشر نشده؟](#چرا-در-فروشگاه-کروم-منتشر-نشده)
 - [دسترسی‌های استفاده‌شده](#دسترسیهای-استفادهشده)
+- [مجوز](#مجوز)
 
 ## امکانات
 
@@ -113,7 +153,9 @@ This is a personal/self-hosted tool, not intended for public distribution. Loadi
 
 از آنجا که این افزونه در فروشگاه کروم منتشر نشده، باید آن را مستقیماً از کد منبع و در «حالت توسعه‌دهنده» بارگذاری کنید. این روش در کروم، Brave، Edge و سایر مرورگرهای مبتنی بر Chromium کار می‌کند.
 
-۱. این پروژه را **دانلود یا کلون** کنید و در یک پوشه روی سیستم خود ذخیره کنید.
+۱. **فایل‌ها را دریافت کنید** — یکی از دو روش زیر:
+   - **دانلود فایل zip** از [آخرین نسخه‌ی منتشرشده](https://github.com/mahd1ar/Read-Aloud-With-Fish/releases/latest)، سپس آن را در پوشه‌ای که می‌خواهید نگه دارید از حالت فشرده خارج کنید (با حذف این پوشه، افزونه هم حذف می‌شود)، **یا**
+   - **کلون کردن مخزن:** `git clone https://github.com/mahd1ar/Read-Aloud-With-Fish.git`
 ۲. مرورگر خود را باز کرده و به صفحه‌ی افزونه‌ها بروید:
    - کروم: `chrome://extensions`
    - Edge: `edge://extensions`
@@ -136,7 +178,13 @@ This is a personal/self-hosted tool, not intended for public distribution. Loadi
 
 ### به‌روزرسانی
 
-از آنجا که این افزونه در فروشگاه کروم نیست، به‌روزرسانی به‌صورت خودکار انجام نمی‌شود. برای به‌روزرسانی: آخرین فایل‌ها را در همان پوشه دانلود/پول کنید، سپس به `chrome://extensions` بروید و روی آیکون رفرش کارت Read Aloud کلیک کنید (یا آن را حذف کرده و دوباره به‌صورت Unpacked بارگذاری کنید).
+از آنجا که این افزونه در فروشگاه کروم نیست، به‌روزرسانی به‌صورت خودکار انجام نمی‌شود. برای به‌روزرسانی:
+
+۱. فایل‌های جدید را دریافت کنید — فایل zip را از [آخرین نسخه‌ی منتشرشده](https://github.com/mahd1ar/Read-Aloud-With-Fish/releases/latest) دانلود کرده و روی پوشه‌ی فعلی خود از حالت فشرده خارج کنید، یا اگر مخزن را کلون کرده‌اید دستور `git pull` را اجرا کنید.
+۲. به `chrome://extensions` بروید و روی آیکون رفرش کارت Read Aloud کلیک کنید.
+۳. تب‌هایی را که از قبل باز بوده‌اند دوباره بارگذاری کنید — صفحاتی که پیش از رفرش باز شده‌اند منوی راست‌کلیک را نخواهند داشت.
+
+اگر باز هم تغییری دیده نشد، افزونه را حذف کرده و دوباره به‌صورت Unpacked بارگذاری کنید.
 
 ## چرا در فروشگاه کروم منتشر نشده؟
 
@@ -151,3 +199,9 @@ This is a personal/self-hosted tool, not intended for public distribution. Loadi
 | `contextMenus` | افزودن گزینه‌ی «Read Aloud» به منوی راست‌کلیک |
 | `offscreen` | پخش صدای تولیدشده از اسکریپت پس‌زمینه |
 | `host_permissions: api.fish.audio` | ارسال متن به API تبدیل متن به گفتار Fish Audio و دریافت فایل صوتی |
+
+## مجوز
+
+این پروژه تحت **مجوز MIT** منتشر شده است — متن کامل و رسمی آن در [بخش انگلیسی](#mit-license) آمده است. به‌طور خلاصه: استفاده، کپی، تغییر و توزیع آن آزاد است، به شرط آنکه متن مجوز و اعلان حق نشر حفظ شود؛ نرم‌افزار «همان‌گونه که هست» و بدون هیچ ضمانتی ارائه می‌شود.
+
+کپی‌رایت © ۲۰۲۶ مهدیار اناری
