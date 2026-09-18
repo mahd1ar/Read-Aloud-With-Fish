@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Read Aloud – Settings</title>
+  <link rel="stylesheet" href="options.css" />
+</head>
+<body>
+  <div class="scanlines" aria-hidden="true"></div>
+
+  <div class="container">
+    <h1 class="title">READ ALOUD<br />SETTINGS</h1>
+
+    <label for="apiKey">FISH AUDIO API KEY</label>
+    <input type="password" id="apiKey" placeholder="fa-..." autocomplete="off" />
+
+    <button id="saveBtn" class="btn">SAVE</button>
+    <span id="status" class="status"></span>
+
+    <p class="hint">
+      GET AN API KEY FROM YOUR
+      <a href="https://fish.audio" target="_blank" rel="noopener noreferrer">FISH AUDIO</a>
+      ACCOUNT. THE KEY IS STORED LOCALLY IN YOUR BROWSER AND ONLY SENT TO
+      API.FISH.AUDIO.
+    </p>
+  </div>
+
+  <script src="options.js"></script>
+</body>
+</html>

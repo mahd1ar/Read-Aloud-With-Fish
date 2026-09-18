@@ -1,0 +1,163 @@
+@font-face {
+  font-family: "Press Start 2P";
+  src: url("fonts/PressStart2P.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "VT323";
+  src: url("fonts/VT323-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("fonts/JetBrainsMono-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --c-bg: #0d0221;
+  --c-panel: #1a0b2e;
+  --c-primary: #ff71ce;
+  --c-secondary: #01cdfe;
+  --c-tertiary: #b967ff;
+  --c-neutral: #ff00ff;
+  --c-surface: #ffb3de;
+  --c-accent: #aeefff;
+  --c-white: #fdf6ff;
+  --c-ink: #0d0221;
+
+  --font-display: "Press Start 2P", monospace;
+  --font-body: "VT323", "JetBrains Mono", monospace;
+}
+
+* {
+  box-sizing: border-box;
+  border-radius: 0 !important;
+}
+
+body {
+  margin: 0;
+  background: var(--c-bg);
+  background-image:
+    linear-gradient(rgba(1, 205, 254, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(1, 205, 254, 0.06) 1px, transparent 1px);
+  background-size: 8px 8px;
+  color: var(--c-white);
+  font-family: var(--font-body);
+  min-height: 100dvh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.scanlines {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 500;
+  background: repeating-linear-gradient(to bottom,
+      rgba(0, 0, 0, 0.35) 0px,
+      rgba(0, 0, 0, 0.35) 1px,
+      transparent 1px,
+      transparent 3px);
+  mix-blend-mode: overlay;
+}
+
+.container {
+  position: relative;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: clamp(2rem, 6vw, 4rem) 1.5rem;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: var(--c-accent);
+  text-shadow:
+    2px 0 0 var(--c-tertiary),
+    -2px 0 0 var(--c-secondary),
+    4px 4px 0 var(--c-neutral);
+  margin: 0 0 32px;
+  letter-spacing: 1px;
+}
+
+label {
+  display: block;
+  font-family: var(--font-display);
+  font-size: 10px;
+  margin-bottom: 12px;
+  color: var(--c-surface);
+}
+
+input[type="password"] {
+  width: 100%;
+  background: var(--c-panel);
+  color: var(--c-white);
+  border: 3px solid var(--c-secondary);
+  box-shadow: 4px 4px 0 #000;
+  padding: 10px;
+  font-family: var(--font-body);
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+input[type="password"]:focus {
+  outline: none;
+  border-color: var(--c-accent);
+  box-shadow: 4px 4px 0 #000, 0 0 0 3px var(--c-tertiary);
+}
+
+.btn {
+  padding: 10px 20px;
+  border: 3px solid #000;
+  box-shadow: 4px 4px 0 #000;
+  background: var(--c-secondary);
+  color: var(--c-ink);
+  font-family: var(--font-display);
+  font-size: 10px;
+  cursor: pointer;
+  transition: transform 100ms steps(2), box-shadow 100ms steps(2);
+}
+
+.btn:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 5px 5px 0 #000;
+}
+
+.btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 #000;
+}
+
+.status {
+  margin-left: 14px;
+  font-family: var(--font-display);
+  font-size: 10px;
+  color: var(--c-secondary);
+}
+
+.hint {
+  margin-top: 32px;
+  font-family: var(--font-body);
+  font-size: 16px;
+  color: var(--c-surface);
+  opacity: 0.8;
+  line-height: 1.5;
+}
+
+.hint a {
+  color: var(--c-secondary);
+}
+
+.hint a:hover {
+  color: var(--c-accent);
+}
